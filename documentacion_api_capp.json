@@ -1,0 +1,101 @@
+// Consultar si cada elemento debe tener un ID o basta con el código de programa académico
+[
+  {
+    "programa_academico": "PR02INME", //SMRPRLE.SMRPRLE_PROGRAM
+    "nombre_programa": "ING. MECÁNICO-ELÉCTRICA", //SMRPRLE.SMRPRLE_PROGRAM_DESC
+    "periodo_de_catalogo": "000000", //SOBCURR.SOBCURR_TERM_CODE_INIT
+    "areas": [
+      {
+        "nombre_area": "PR02INMEPR", //SMRPAAP.SMRPAAP_AREA
+        "prioridad_area": "10" //SMRPAAP.SMRPAAP_AREA_PRIORITY
+        //reglas_area:...
+      },
+
+      {
+        "nombre_area": "PR02INMEIN", //SMRPAAP.SMRPAAP_AREA
+        "prioridad_area": "20" //SMRPAAP.SMRPAAP_AREA_PRIORITY
+        //reglas_area...
+      },
+
+      {
+        "nombre_area": "PR02INME01", //SMRPAAP.SMRPAAP_AREA
+        "prioridad_area": "30", //SMRPAAP.SMRPAAP_AREA_PRIORITY
+        "reglas_area": [
+          {
+            "nombre_regla": "ESTU02001", //SMRACAA.SMRACAA_RULE
+            "descripcion_regla": "ORIENTACIÓN UNIVERSITARIA", //SMBARUL.SMBARUL_DESC
+            "cursos": [
+              {
+                "nombre_curso": "ESTU02001", //SMRARUL.SMRARUL_SUBJ_CODE + SMRARUL.SMRARUL_CRSE_NUMB_LOW
+                "descripcion_del_curso": "ORIENTACIÓN UNIVERSITARIA" //SCBCRSE.SCBCRSE_TITLE
+              },
+
+              // EJEMPLO EN CASO APAREZCA UN CURSO MIGRADO (NO ES EL CASO, PERO PARA SABER COMO TRABAJAR)
+              // ------------------------ INICIO DEL EJEMPLO ------------------------
+              {
+                "nombre_curso": "MGEM72293", //SMRARUL.SMRARUL_SUBJ_CODE + SMRARUL.SMRARUL_CRSE_NUMB_LOW
+                "descripcion_del_curso": "METODOS DE OPTIMIZACION EN ING" //SHRTCKN.SHRTCKN_CRSE_TITLE <-- Este campo se obtiene de una dirección distinta por ser migrado
+              }
+              // -------------------------- FIN DEL EJEMPLO --------------------------
+            ]
+          },
+          {
+            "nombre_regla": "MATE02003", //SMRACAA.SMRACAA_RULE
+            "descripcion_regla": "ÁLGEBRA LINEAL", //SMBARUL.SMBARUL_DESC
+            "cursos": [
+              {
+                "nombre_curso": "MATE02003", //SMRARUL.SMRARUL_SUBJ_CODE + SMRARUL.SMRARUL_CRSE_NUMB_LOW
+                "descripcion_del_curso": "ÁLGEBRA LINEAL" //SCBCRSE.SCBCRSE_TITLE
+              }
+            ]
+          },
+          {
+            "nombre_regla": "MATE02006", //SMRACAA.SMRACAA_RULE
+            "descripcion_regla": "CÁLCULO ELEMENTAL", //SMBARUL.SMBARUL_DESC
+            "cursos": [
+              {
+                "nombre_curso": "MATE02006", //SMRARUL.SMRARUL_SUBJ_CODE + SMRARUL.SMRARUL_CRSE_NUMB_LOW
+                "descripcion_del_curso": "CÁLCULO ELEMENTAL" //SCBCRSE.SCBCRSE_TITLE
+              }
+            ]
+          },
+          {
+            "nombre_regla": "MATE02008", //SMRACAA.SMRACAA_RULE
+            "descripcion_regla": "GEOMET. ANALÍTICA VECTORIAL", //SMBARUL.SMBARUL_DESC
+            "cursos": [
+              {
+                "nombre_curso": "MATE02008", //SMRARUL.SMRARUL_SUBJ_CODE + SMRARUL.SMRARUL_CRSE_NUMB_LOW
+                "descripcion_del_curso": "GEOMET. ANALÍTICA VECTORIAL" //SCBCRSE.SCBCRSE_TITLE
+              }
+            ]
+          },
+          {
+            "nombre_regla": "REGR02001", //SMRACAA.SMRACAA_RULE
+            "descripcion_regla": "INTRO REPRESENTACIÓN GRÁFICA", //SMBARUL.SMBARUL_DESC
+            "cursos": [
+              {
+                "nombre_curso": "REGR02001", //SMRARUL.SMRARUL_SUBJ_CODE + SMRARUL.SMRARUL_CRSE_NUMB_LOW
+                "descripcion_del_curso": "INTRO REPRESENTACIÓN GRÁFICA" //SCBCRSE.SCBCRSE_TITLE
+              }
+            ]
+          }
+        ]
+      },
+
+      {
+        "nombre_area": "PR02INME02", //SMRPAAP.SMRPAAP_AREA
+        "prioridad_area": "40" //SMRPAAP.SMRPAAP_AREA_PRIORITY
+        //reglas_area...
+      }
+
+      // Más áreas según sea necesario...
+    ]
+  },
+
+  {
+    "programa_academico": "PR02ICIV" //SMRPRLE.SMRPRLE_PROGRAM
+    //nombre_programa...
+  }
+
+  // Todos los programas académicos...
+]
